@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'bebasneue';
+    src: local('Bebas Neue Bold'), local('BebasNeueBold'), url('bebasneue/bebasneuebold.woff2') format('woff2'), url('bebasneue/bebasneuebold.woff') format('woff'), url('bebasneue/bebasneuebold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 body, ul {
     margin: 0;
     padding: 0;
@@ -5,6 +12,7 @@ body, ul {
 
 * {
     box-sizing: border-box;
+    font-family: 'bebasneue';
 }
 
 a {
@@ -55,9 +63,17 @@ li {
     align-items: center;
 }
 
+#cart i {
+    font-style: normal;
+    font-size: 26px;
+    margin-left: 15px;
+    position: relative;
+    top: 5px;
+}
+
 #header-menu {
     background: #4ccfc1;
-    padding: 10px 15px;
+    padding: 12px 15px 8px 15px;
 }
 
 #header-menu ul {
@@ -67,6 +83,7 @@ li {
 #header-menu ul li a {
     border-right: 1px solid #fff;
     padding: 0 20px;
+    font-size: 22px;
 }
 
 #header-menu ul li:first-child a {
@@ -77,6 +94,48 @@ li {
     padding-right: 0;
     border: none;
 }
+
+#slider {
+    justify-content: space-around;
+    padding: 55px 0;
+    color: #fff;
+}
+
+
+#slider-bg {
+    background: #3ec5b7;
+}
+
+#slider-text {
+    max-width: 420px;
+}
+
+#slider-text h2 {
+    font-size: 70px;
+    margin: 15px 0 0 0;
+}
+
+#slider-text p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px 0 25px 0;
+}
+
+#slider-text button {
+    background: none;
+    padding: 12px 20px 8px 20px;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#slider-text button:hover {
+    color: #3ec5b7;
+    background: black;
+}
+
 
 @media (max-width: 1025px) {
     #header-top {
@@ -94,14 +153,20 @@ li {
     justify-content: center;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 700px) {
+    #slider {
+        text-align: center;
+        justify-content: center;
+        padding: 15px 0;
+    }
+
     #header-top {
         flex-direction: column;
     }
-}
 
-#search {
-    margin: 15px 0;
+    #search {
+        margin: 15px 0;
+    }
 }
 
 @media (max-width: 530px) {
